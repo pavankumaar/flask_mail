@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mail</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+	<link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+</head>
+<body>
+
+	<div id="mail">
+		<h2 class="twit" align="center">Mail</h2>
+		<form method="POST">
+			<div class="user_div">
+                <input type="text" name="sender" onfocus="abc()" required spellcheck="false">
+			    <label for="ssnid" class="user_label">
+               	    <span class="content_name">Your Email</span>
+                </label>
+                {%if error%}
+                	Invalid mail ID
+                {%endif%}
+            </div>
+            <div class="user_div">
+                <input type="text" name="password" onfocus="abc()" required spellcheck="false">
+			    <label for="ssnid" class="user_label">
+               	    <span class="content_name">Mail Password</span>
+                </label>
+            </div>
+            <div class="user_div">
+                <input type="text" name="receiver" onfocus="abc()" required spellcheck="false">
+			    <label for="ssnid" class="user_label">
+               	    <span class="content_name">Receiver Mail</span>
+                </label>
+            </div>
+            <div class="user_div">
+                <input type="text" name="message" onfocus="abc()" required spellcheck="false">
+			    <label for="ssnid" class="user_label">
+               	    <span class="content_name">Message</span>
+                </label>
+            </div>
+            <div align="center">
+				<input style="font-weight: bold;" align="center" class="login_btn1" type="submit" name="send" value="Send">
+			</div>
+		</form>
+	</div>
+
+
+</body>
+</html>
